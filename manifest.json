@@ -1,0 +1,10 @@
+{
+  "manifest_version": 3,
+  "name": "Simple Calculator",
+  "version": "1.0",
+  "description": "A calculator for quick calculations.",
+  "action": {
+    "default_popup": "popup.html"
+  },
+  "permissions": []
+}
