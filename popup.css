@@ -1,14 +1,20 @@
 body {
     font-family: "Times New Roman", sans-serif;
+    height: 300px;
     text-align: center;
-    padding: 100px;
-    background-color: #363636;
+    padding-left: 60px;
+    padding-right: 60px;
+    padding-top: 20px;
+    padding-bottom: 140px;
+    background-color: #474747;
+    box-shadow: 0 24px 32px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
 }
 #buttons {
     display: grid;
     grid-template-columns: repeat(1, 4fr); /* 4 equally spaced columns */
     gap: 4px; /* Spacing between buttons */
 }
+
 
 
 button {
@@ -21,15 +27,18 @@ button {
     cursor: pointer;
 }
 
-symbolButton {
-    padding: 15px;
-    font-size: 1.4em;
-    text-align: center;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+#buttons .btn[value="+"],
+#buttons .btn[value="-"],
+#buttons .btn[value="*"],
+#buttons .btn[value="/"]
+ {
     background-color: #f0aa13;
-    cursor: pointer;
 }
-#buttons .btn[value="."] {
-    grid-column: span 3; /* Make the "C" button take up 2 columns */
+
+#buttons .btn[value="="] {
+    background-color: #f0aa13; /* Red background */
+    width: 190px;
+    height: 30px;
+    padding-top: 2px;
+    text-align: center;
 }
