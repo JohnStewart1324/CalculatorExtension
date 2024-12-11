@@ -6,5 +6,9 @@
   "action": {
     "default_popup": "popup.html"
   },
-  "permissions": []
+  "host_permissions": [],
+  "web_accessible_resources": [],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self'"
+  }
 }

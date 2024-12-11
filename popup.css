@@ -2,4 +2,34 @@ body {
     font-family: "Times New Roman", sans-serif;
     text-align: center;
     padding: 100px;
+    background-color: #363636;
+}
+#buttons {
+    display: grid;
+    grid-template-columns: repeat(1, 4fr); /* 4 equally spaced columns */
+    gap: 4px; /* Spacing between buttons */
+}
+
+
+button {
+    padding: 15px;
+    font-size: 1.4em;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #ffffff;
+    cursor: pointer;
+}
+
+symbolButton {
+    padding: 15px;
+    font-size: 1.4em;
+    text-align: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #f0aa13;
+    cursor: pointer;
+}
+#buttons .btn[value="."] {
+    grid-column: span 3; /* Make the "C" button take up 2 columns */
 }

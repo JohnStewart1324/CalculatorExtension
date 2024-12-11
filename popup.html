@@ -3,23 +3,61 @@
 <head>
     <meta charset="UTF-8">
     <title>Calker</title>
+    <link rel="stylesheet" href="popup.css">
 </head>
 <body>
+    <h1>
+        Simple Calculator 
+    </h1>
+    <div id = "calculator">
+        <input type="text" id="display" disabled />
+    
 
-<h1>
-    Hello World!!!!
+        <div id = "buttons">
+            <div id = "row1">
+                <!-- Row 1 -->
+                <button class="btn" value="7">7</button>
+                <button class="btn" value="8">8</button>
+                <button class="btn" value="9">9</button>
+                <symbolButton class="btn" value="/">÷</button>
+            </div>
+            <div id = "row2">
+                <!-- Row 2 -->
+                <button class="btn" value="4">4</button>
+                <button class="btn" value="5">5</button>
+                <button class="btn" value="6">6</button>
+                <symbolButton class="btn" value="*">×</button>
+            </div>
+            <div id = "row3">
+                <!-- Row 3 -->
+                <button class="btn" value="1">1</button>
+                <button class="btn" value="2">2</button>
+                <button class="btn" value="3">3</button>
+                <symbolButton class="btn" value="-">−</button>
+            </div>
+            <div id = "row4">
+                <!-- Row 4 -->
+                <button class="btn" value="0">0</button>
+                <button class="btn" value=".">.</button>
+                
+                <symbolButton class="btn" value="+">+</button>
+            </div>
+            <div id = "ClearRow">
+                <button id="clear">C</button>
+                <button id="equals" value="=">=</button>
+            </div>
+                
+        </div>
+    </div>
+
 
     <form id="inputBox">
         <input type="text" name="" id="">
     </form>
-</h1>
-
-<p1>
-    This is paragraph one's text.
-</p1>
-
-    <script>
-        src = "popup.js"
-    </script>
+   
+    <p1>
+        This is paragraph one's text.
+    </p1>
+    <script src="popup.js"></script>
 </body>
 </html>
