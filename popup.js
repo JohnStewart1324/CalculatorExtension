@@ -4,6 +4,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     let input = "";
     let old = "";
+    let result = "";
     let operator = null;
 
     //Button clicks handler
@@ -12,6 +13,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const value = button.value;
             console.log(value);
             if (["+","-","*","/"].includes(value)) {
+                input = display.value
                 operator = value;
                 old = input;
                 input = "";
@@ -21,18 +23,20 @@ document.addEventListener("DOMContentLoaded", () => {
             else if (value === "=") {
                 switch (operator) {
                     case "+":
-                        display.value = Number(old) + Number(input);
+                        result = Number(old) + Number(input);
                     break;
                     case "-":
-                        display.value = Number(old) - Number(input);
+                        result = Number(old) - Number(input);
                     break;
                     case "*":
-                        display.value = Number(old) * Number(input);
+                        result = Number(old) * Number(input);
                     break;
                     case "/":
-                        display.value = Number(old) / Number(input);
+                        result = Number(old) / Number(input);
                     break;
                 }
+                display.value = result;
+                old = result;
             }
 
             else if (value === "C") {

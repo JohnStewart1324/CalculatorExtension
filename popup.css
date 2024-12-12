@@ -1,12 +1,12 @@
 body {
     font-family: "Times New Roman", sans-serif;
-    height: 350px;
+    height: 340px;
     width: 200px;
     text-align: center;
     padding-left: 60px;
     padding-right: 60px;
     padding-top: 20px;
-    padding-bottom: 140px;
+    padding-bottom: 120px;
     background-color: #474747;
     box-shadow: 0 24px 32px rgba(0, 0, 0, 0.2);
 }
