@@ -47,10 +47,19 @@ document.addEventListener("DOMContentLoaded", () => {
                 
             }
 
+            else if (value == "copy") {
+                navigator.clipboard.writeText(display.value).then(
+                alert("Copied to clipboard: " + display.value));
+            }
+
+            else if (value == "del") {
+                input = input.slice(0, -1);
+                display.value = input;
+            }
+
             else {
                 input += value;
                 display.value = input;
-                
             }
         });
     });
