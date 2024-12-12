@@ -1,20 +1,15 @@
 body {
     font-family: "Times New Roman", sans-serif;
-    height: 300px;
+    height: 350px;
+    width: 200px;
     text-align: center;
     padding-left: 60px;
     padding-right: 60px;
     padding-top: 20px;
     padding-bottom: 140px;
     background-color: #474747;
-    box-shadow: 0 24px 32px rgba(0, 0, 0, 0.2); /* Subtle shadow effect */
+    box-shadow: 0 24px 32px rgba(0, 0, 0, 0.2);
 }
-#buttons {
-    display: grid;
-    grid-template-columns: repeat(1, 4fr); /* 4 equally spaced columns */
-    gap: 4px; /* Spacing between buttons */
-}
-
 
 
 button {
@@ -27,6 +22,13 @@ button {
     cursor: pointer;
 }
 
+#buttons {
+    display: grid;
+    grid-template-columns: repeat(1, 4fr);
+    gap: 4px;
+}
+
+
 #buttons .btn[value="+"],
 #buttons .btn[value="-"],
 #buttons .btn[value="*"],
@@ -36,9 +38,10 @@ button {
 }
 
 #buttons .btn[value="="] {
-    background-color: #f0aa13; /* Red background */
-    width: 190px;
+    background-color: #f0aa13;
+    width: 175px;
     height: 30px;
     padding-top: 2px;
     text-align: center;
+    font-size: 2em;
 }
