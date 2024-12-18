@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
             const value = button.value;
             console.log(value);
             
+            
             if (["+","-","*","/"].includes(value)) {
                 if (operator == null) {
                     hasDecimal = false;
@@ -39,6 +40,7 @@ document.addEventListener("DOMContentLoaded", () => {
             }
 
             else if (value === "=") {
+                
                 switch (operator) {
                     case "+":
                         result = Number(old) + Number(input);
@@ -60,8 +62,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 hasComputed = true;
                 setOperatorColors(null);
                 operator = null;
-                console.log("input2: " + input);
-                console.log("old2: " + old);
             }
 
             else if (value == "C") {
@@ -71,8 +71,6 @@ document.addEventListener("DOMContentLoaded", () => {
                         display.value = "";
                         document.getElementById("C").textContent = "AC";
                         hasDecimal = false;
-                        console.log("input: " + input);
-                        console.log("old: " + old);
                     break;
                     case "AC":
                         setOperatorColors(null);
@@ -81,8 +79,6 @@ document.addEventListener("DOMContentLoaded", () => {
                         old = "";
                         display.value = "";
                         hasDecimal = false;
-                        console.log("input: " + input);
-                        console.log("old: " + old);
 
                     break;
                 }
@@ -97,6 +93,15 @@ document.addEventListener("DOMContentLoaded", () => {
             else if (value == "del") {
                 input = input.slice(0, -1);
                 display.value = input;
+            }
+
+            else if (value == "sqrt") {
+                if (input != "") {
+                    result = Math.sqrt(Number(input));
+                    display.value = parseFloat(Number(result).toPrecision(5));
+                    input = result;
+                    old = result;
+                }
             }
 
             else if (["1", "2", "3", "4", "5", "6", "7", "8", "9"].includes(value)) {
@@ -119,8 +124,7 @@ document.addEventListener("DOMContentLoaded", () => {
                     
                 }
                 display.value = input;
-                console.log("input: " + input);
-                console.log("old: " + old);
+                
                 hasComputed = false;
             }
             
@@ -144,7 +148,8 @@ document.addEventListener("DOMContentLoaded", () => {
                 document.getElementById("C").textContent = "C";
                 
             }
-
+            console.log("input: " + input);
+            console.log("old: " + old);
             
         });
 
@@ -183,6 +188,5 @@ document.addEventListener("DOMContentLoaded", () => {
 
             }
         }
-
     });
 });

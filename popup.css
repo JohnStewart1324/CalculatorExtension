@@ -76,11 +76,24 @@ button {
 #buttons .btn[value = "5"],
 #buttons .btn[value = "6"],
 #buttons .btn[value = "*"],
-#buttons .btn[value = "copy"] {
+#buttons .btn[value = "copy"],
+#buttons .btn[value = "1"],
+#buttons .btn[value = "2"],
+#buttons .btn[value = "3"],
+#buttons .btn[value = "-"],
+#buttons .btn[value = "sqrt"] {
     transform: translateX(20px);
 }
 
 #buttons .btn[value = "copy"] {
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    text-align: center;
+    font-size: 2em;
+}
+
+#buttons .btn[value = "sqrt"] {
     width: 40px;
     height: 40px;
     padding: 0;
