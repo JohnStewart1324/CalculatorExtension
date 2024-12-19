@@ -61,7 +61,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 display.value = parseFloat(result);
                 hasComputed = true;
                 setOperatorColors(null);
-                operator = null;
             }
 
             else if (value == "C") {
@@ -148,8 +147,6 @@ document.addEventListener("DOMContentLoaded", () => {
                 document.getElementById("C").textContent = "C";
                 
             }
-            console.log("input: " + input);
-            console.log("old: " + old);
             
         });
 
